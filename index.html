@@ -85,7 +85,7 @@ footer{padding:34px 0 44px;color:var(--mute);font-size:.92rem;border-top:1px sol
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 @media (max-width:820px){
-  nav a:not(.btn){display:none}
+  nav a:not(.nav-cta){display:none}
   .hero{padding:44px 0 64px}
   .hero .wrap,.why{grid-template-columns:1fr}
   .gem{order:-1}
@@ -95,6 +95,77 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   section{padding:64px 0}
 }
 @media (max-width:480px){.steps{grid-template-columns:1fr}}
+/* monte seu site */
+.orc{display:grid;gap:22px}
+.orc fieldset{margin:0;padding:26px 24px;border:1px solid var(--line);border-radius:20px;background:var(--ink);min-width:0}
+.orc legend{padding:0 10px;font:700 1.15rem var(--display);color:var(--v200)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:grid;gap:6px;font-weight:500;font-size:.95rem;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld input:not([type=checkbox]):not([type=radio]):not([type=color]),.fld select,.fld textarea{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);font:400 1rem var(--body)}
+.fld textarea{min-height:110px;resize:vertical}
+.fld select{appearance:auto}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--v400);box-shadow:0 0 0 3px rgba(155,48,255,.25)}
+.fld input[type=color]{width:100%;height:48px;padding:4px;background:var(--panel);border:1px solid var(--line);border-radius:12px;cursor:pointer}
+.checks{display:flex;flex-wrap:wrap;gap:10px}
+.checks label{display:flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:.95rem}
+.checks input{accent-color:var(--v500);width:17px;height:17px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.opt{display:block;cursor:pointer}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt .card{display:block;height:100%;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--panel);transition:border-color .15s,background .15s}
+.opt input:checked+.card{border-color:var(--v400);background:linear-gradient(160deg,var(--v900),var(--panel) 80%);box-shadow:0 0 0 1px var(--v400)}
+.opt input:focus-visible+.card{outline:2px solid var(--v400);outline-offset:3px}
+.card b{display:block;font:700 1.2rem var(--display);margin-bottom:6px}
+.card em{display:inline-block;font-style:normal;font-weight:600;color:var(--v200);margin-bottom:8px}
+.card span{display:block;color:var(--mute);font-size:.96rem}
+#dominiobox{margin-top:16px}
+#dominiobox[hidden]{display:none}
+.total{margin-top:18px;padding:16px 18px;border-radius:14px;border:1px solid var(--v700);background:var(--black);font-weight:600}
+.total small{display:block;color:var(--mute);font-weight:400;margin-top:4px}
+.send{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.send button{font:600 1.05rem var(--body);cursor:pointer}
+.send p{margin:0;color:var(--mute);font-size:.92rem;max-width:30em}
+@media (max-width:820px){.grid2,.opts{grid-template-columns:1fr}.orc fieldset{padding:22px 16px}}
+.err{display:none;color:#ff8aa1;font-size:.88rem;font-weight:500;line-height:1.4}
+.fld.bad .err{display:block}
+.fld.bad input{border-color:#ff5c7a!important;box-shadow:0 0 0 3px rgba(255,92,122,.18)}
+.formerr{display:none;padding:14px 16px;border:1px solid #ff5c7a;border-radius:14px;background:rgba(255,92,122,.1);color:#ffc2cd;font-weight:500}
+.formerr.on{display:block}
+.nav-cta{display:inline-flex;align-items:center;gap:10px;padding:5px 5px 5px 18px;border-radius:999px;border:1px solid transparent;font-weight:600;font-size:.95rem;text-decoration:none;color:#fff;background:linear-gradient(var(--black),var(--black)) padding-box,linear-gradient(135deg,var(--v400),var(--v700)) border-box;transition:box-shadow .2s,transform .2s}
+.nav-cta i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--v500),var(--v700));transition:transform .25s}
+.nav-cta svg{width:15px;height:15px}
+.nav-cta:hover{box-shadow:0 0 26px -4px var(--v500);transform:translateY(-1px)}
+.nav-cta:hover i{transform:rotate(-45deg)}
+@media (prefers-reduced-motion:reduce){.nav-cta,.nav-cta i{transition:none}}
+.color{gap:10px}
+.cbox{display:flex;align-items:center;gap:12px;padding:6px 14px 6px 6px;background:var(--panel);border:1px solid var(--line);border-radius:999px}
+.sw{position:relative;width:38px;height:38px;border-radius:50%;overflow:hidden;flex:none;box-shadow:0 0 0 2px var(--line),0 0 22px -4px var(--c,#9b30ff);transition:box-shadow .2s}
+.sw:hover,.sw:focus-within{box-shadow:0 0 0 2px var(--v400),0 0 26px -2px var(--c,#9b30ff)}
+.fld .sw input[type=color]{position:absolute;inset:-10px;width:calc(100% + 20px);height:calc(100% + 20px);padding:0;border:0;border-radius:0;background:none;cursor:pointer;-webkit-appearance:none;appearance:none}
+.sw input::-webkit-color-swatch-wrapper{padding:0}
+.sw input::-webkit-color-swatch{border:0}
+.sw input::-moz-color-swatch{border:0}
+.hex{font:600 1rem var(--body);letter-spacing:.06em}
+.tap{margin-left:auto;color:var(--mute);font-size:.82rem;font-weight:400}
+.presets{display:flex;gap:10px;flex-wrap:wrap}
+.presets button{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);cursor:pointer;padding:0;transition:transform .15s}
+.presets button:hover{transform:scale(1.12)}
+.presets button[aria-pressed=true]{border-color:#fff;box-shadow:0 0 0 2px var(--v500)}
+button.sw{background:var(--c,#9b30ff);border:0;padding:0;cursor:pointer}
+button.sw::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.35),transparent 55%)}
+.pop{margin-top:2px;padding:12px;max-width:300px;border:1px solid var(--v700);border-radius:18px;background:linear-gradient(160deg,var(--v900),var(--ink) 70%);box-shadow:0 18px 50px -12px rgba(0,0,0,.9),0 0 40px -14px var(--v500);animation:popin .18s ease}
+.pop[hidden]{display:none}
+@keyframes popin{from{opacity:0;transform:translateY(-6px)}}
+.sv{position:relative;height:110px;border-radius:12px;touch-action:none;cursor:crosshair;background-image:linear-gradient(to top,#000,transparent),linear-gradient(to right,#fff,transparent)}
+.knob{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.4),0 2px 8px rgba(0,0,0,.5);pointer-events:none}
+.fld.color .pop input.hue{-webkit-appearance:none;appearance:none;width:100%;height:10px;margin:14px 0;padding:0!important;border:0!important;border-radius:999px!important;background:linear-gradient(to right,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00)!important;cursor:pointer;box-shadow:none}
+.hue::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--v500);box-shadow:0 2px 8px rgba(0,0,0,.5)}
+.hue::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--v500)}
+.prow{display:flex;gap:10px}
+.fld.color .pop input.hexin{flex:1;min-width:0;width:auto;padding:8px 12px;font-size:.9rem;font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase}
+.done{padding:0 16px;border:0;border-radius:10px;background:linear-gradient(135deg,var(--v500),var(--v700));color:#fff;font:600 .95rem var(--body);cursor:pointer}
+@media (prefers-reduced-motion:reduce){.pop{animation:none}}
 /* bolinha de conversa */
 .chat{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
 .chat-fab{width:62px;height:62px;border-radius:50%;border:1px solid var(--v400);background:linear-gradient(135deg,var(--v500),var(--v700));color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(155,48,255,.7);transition:transform .15s}
@@ -142,7 +213,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <a href="#servicos">Serviços</a>
       <a href="#processo">Como trabalhamos</a>
       <a href="#diferenciais">Diferenciais</a>
-      <a class="btn" href="#contato" style="padding:9px 20px;color:#fff">Falar comigo</a>
+      <a href="#monte">Monte seu site</a>
+      <a class="nav-cta" href="#contato">Entrar em contato<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
     </nav>
   </div>
 </header>
@@ -154,7 +226,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <h1>Seu negócio na frente de quem procura por ele.</h1>
         <p>A Obsidian in Dev desenvolve sites para empresas que querem crescer no digital e conquistar novos clientes.</p>
         <div class="actions">
-          <a class="btn" href="#contato">Quero meu site</a>
+          <a class="btn" href="#monte">Quero meu site</a>
           <a class="btn ghost" href="#servicos">Ver o que faço</a>
         </div>
       </div>
@@ -198,6 +270,89 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <li><strong>Pensado para o celular</strong><span>A maioria dos clientes chega pelo telefone, então o site nasce pronto para ele.</span></li>
         <li><strong>Foco em resultado</strong><span>Cada seção existe para levar o visitante a entrar em contato.</span></li>
       </ul>
+    </div>
+  </section>
+
+  <section id="monte" class="build">
+    <div class="wrap">
+      <div class="head">
+        <h2>Monte o seu site.</h2>
+        <p>Conte como você quer o seu site, escolha a hospedagem e envie. Eu recebo tudo por e-mail e respondo com a proposta.</p>
+      </div>
+      <form id="orc" class="orc" novalidate>
+        <fieldset>
+          <legend>1. Sobre você</legend>
+          <div class="grid2">
+            <label class="fld">Seu nome<input name="nome" required autocomplete="name"><span class="err"></span></label>
+            <label class="fld">Nome da empresa<input name="empresa" required><span class="err"></span></label>
+            <label class="fld">Seu e-mail<input name="email" type="email" required autocomplete="email"><span class="err"></span></label>
+            <label class="fld">WhatsApp ou telefone<input name="whats" type="tel" autocomplete="tel"></label>
+            <label class="fld full">Ramo do negócio<input name="ramo" placeholder="Ex.: restaurante, loja de roupas, clínica"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Como você quer o site</legend>
+          <div class="grid2">
+            <div class="fld color" data-presets="#9b30ff,#2f6bff,#16b37a,#ff7a1a,#ff3d8b,#e53935"><span>Cor principal</span><div class="cbox"><button type="button" class="sw" aria-label="Escolher a cor principal" aria-expanded="false"></button><input type="hidden" name="cor1" value="#9b30ff"><output class="hex">#9B30FF</output><span class="tap">Toque no círculo</span></div><div class="presets" role="group" aria-label="Cores sugeridas"></div></div>
+            <div class="fld color" data-presets="#000000,#ffffff,#1f2937,#0b1f4b,#f5ecd9,#d4af37"><span>Cor secundária</span><div class="cbox"><button type="button" class="sw" aria-label="Escolher a cor secundária" aria-expanded="false"></button><input type="hidden" name="cor2" value="#000000"><output class="hex">#000000</output><span class="tap">Toque no círculo</span></div><div class="presets" role="group" aria-label="Cores sugeridas"></div></div>
+            <label class="fld full">Estilo
+              <select name="estilo">
+                <option>Moderno e escuro</option>
+                <option>Claro e limpo</option>
+                <option>Colorido e vibrante</option>
+                <option>Elegante e sofisticado</option>
+                <option>Ainda não sei, me sugira</option>
+              </select>
+            </label>
+            <div class="fld full">O que o site deve ter
+              <div class="checks">
+                <label><input type="checkbox" name="sec" value="Sobre a empresa" checked> Sobre a empresa</label>
+                <label><input type="checkbox" name="sec" value="Serviços ou produtos" checked> Serviços ou produtos</label>
+                <label><input type="checkbox" name="sec" value="Galeria de fotos"> Galeria de fotos</label>
+                <label><input type="checkbox" name="sec" value="Depoimentos"> Depoimentos</label>
+                <label><input type="checkbox" name="sec" value="Localização e mapa"> Localização e mapa</label>
+                <label><input type="checkbox" name="sec" value="Botão de WhatsApp" checked> Botão de WhatsApp</label>
+              </div>
+            </div>
+            <label class="fld full">Ideias e detalhes<textarea name="ideias" placeholder="Conte o que mais você quer no site, sites que você gosta, textos, etc."></textarea></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Hospedagem</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="host" value="obsidian" checked>
+              <span class="card"><b>Host Obsidian</b><em>Grátis e vitalício</em><span>Você paga só a produção do site: R$ 150,00. Sem mensalidade de hospedagem.</span></span></label>
+            <label class="opt"><input type="radio" name="host" value="dominio">
+              <span class="card"><b>Domínio .com.br</b><em>Endereço próprio</em><span>Produção do site (R$ 150,00) mais o valor do domínio pelo tempo que você escolher.</span></span></label>
+          </div>
+          <div id="dominiobox" class="grid2" hidden>
+            <label class="fld">Domínio desejado<input name="dominio" placeholder="minhaempresa.com.br"><span class="err"></span></label>
+            <label class="fld">Por quanto tempo
+              <select name="anos" id="anos">
+                <option value="1">1 ano - R$ 40,00</option>
+                <option value="2">2 anos - R$ 76,00</option>
+                <option value="3">3 anos - R$ 112,00</option>
+                <option value="4">4 anos - R$ 148,00</option>
+                <option value="5">5 anos - R$ 184,00</option>
+                <option value="6">6 anos - R$ 220,00</option>
+                <option value="7">7 anos - R$ 256,00</option>
+                <option value="8">8 anos - R$ 292,00</option>
+                <option value="9">9 anos - R$ 328,00</option>
+                <option value="10">10 anos - R$ 364,00</option>
+              </select>
+            </label>
+          </div>
+          <div class="total" id="total" aria-live="polite"></div>
+        </fieldset>
+
+        <div class="formerr" id="formerr" role="alert"></div>
+        <div class="send">
+          <button class="btn" type="submit">Enviar pedido por e-mail</button>
+          <p>Vai abrir o seu app de e-mail com a mensagem pronta. É só tocar em enviar.</p>
+        </div>
+      </form>
     </div>
   </section>
 
@@ -248,6 +403,110 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   fab.addEventListener('click',function(){set(panel.hidden);});
   document.getElementById('chat-close').addEventListener('click',function(){set(false);fab.focus();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){set(false);fab.focus();}});
+})();
+</script>
+<script>
+(function(){
+  var f=document.getElementById('orc');if(!f)return;
+  var P={1:40,2:76,3:112,4:148,5:184,6:220,7:256,8:292,9:328,10:364},BASE=150;
+  var box=document.getElementById('dominiobox'),tot=document.getElementById('total'),anos=document.getElementById('anos');
+  function brl(n){return 'R$ '+n.toFixed(2).replace('.',',');}
+  function resumo(){
+    if(f.elements['host'].value==='dominio'){
+      var y=+anos.value,d=P[y];
+      return {total:BASE+d,txt:'Produção '+brl(BASE)+' + domínio por '+y+(y>1?' anos ':' ano ')+brl(d)};
+    }
+    return {total:BASE,txt:'Produção do site '+brl(BASE)+' + Host Obsidian grátis'};
+  }
+  function calc(){
+    var dom=f.elements['host'].value==='dominio';box.hidden=!dom;
+    var r=resumo();
+    tot.innerHTML='Total: '+brl(r.total)+'<small>'+r.txt+'</small>';
+  }
+  f.addEventListener('change',calc);calc();
+  var MSG={nome:'Campo vazio: por favor, escreva o seu nome.',empresa:'Campo vazio: por favor, escreva o nome da sua empresa.',email:'Campo vazio: por favor, escreva o seu e-mail.',dominio:'Campo vazio: por favor, escreva o domínio que você quer, como minhaempresa.com.br.'};
+  function setErr(n,m){var el=f.elements[n],box=el.closest('.fld');box.classList.toggle('bad',!!m);box.querySelector('.err').textContent=m||'';el.setAttribute('aria-invalid',m?'true':'false');}
+  function check(){
+    var bad=[],names=['nome','empresa','email'];
+    if(f.elements['host'].value==='dominio')names.push('dominio');
+    names.forEach(function(n){
+      var v=f.elements[n].value.trim(),m='';
+      if(!v)m=MSG[n];
+      else if(n==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))m='E-mail inválido: confira se tem o @ e o final, como .com.';
+      setErr(n,m);if(m)bad.push(n);
+    });
+    var fe=document.getElementById('formerr');
+    fe.classList.toggle('on',bad.length>0);
+    fe.textContent=bad.length?'Faltam informações: preencha os campos marcados em vermelho antes de enviar.':'';
+    if(bad.length)f.elements[bad[0]].focus();
+    return !bad.length;
+  }
+  f.addEventListener('input',function(e){var n=e.target.name,b=e.target.closest('.fld');if(MSG[n]&&b&&b.classList.contains('bad')&&e.target.value.trim())setErr(n,'');});
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var g=function(n){return (f.elements[n].value||'').trim();};
+    var secs=Array.prototype.map.call(f.querySelectorAll('input[name=sec]:checked'),function(x){return x.value;}).join(', ')||'não informado';
+    var r=resumo(),dom=f.elements['host'].value==='dominio';
+    var L=['PEDIDO DE SITE','',
+      'Nome: '+g('nome'),'Empresa: '+g('empresa'),'E-mail: '+g('email'),'WhatsApp: '+(g('whats')||'não informado'),'Ramo: '+(g('ramo')||'não informado'),'',
+      'Cor principal: '+g('cor1'),'Cor secundária: '+g('cor2'),'Estilo: '+g('estilo'),'O site deve ter: '+secs,'Ideias: '+(g('ideias')||'não informado'),'',
+      'Hospedagem: '+(dom?'Domínio .com.br':'Host Obsidian (grátis e vitalício)')];
+    if(dom){L.push('Domínio desejado: '+(g('dominio')||'não informado'));L.push('Tempo: '+anos.value+(+anos.value>1?' anos':' ano'));}
+    L.push('Valor total: '+brl(r.total)+' ('+r.txt+')');
+    var s='Pedido de site - '+g('empresa');
+    window.location.href='mailto:obsidian_dev@hotmail.com?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(L.join('\n'));
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.color').forEach(function(c){
+    var inp=c.querySelector('input'),out=c.querySelector('.hex'),sw=c.querySelector('.sw'),box=c.querySelector('.presets');
+    function sync(){
+      out.textContent=inp.value.toUpperCase();sw.style.setProperty('--c',inp.value);
+      Array.prototype.forEach.call(box.children,function(b){b.setAttribute('aria-pressed',b.dataset.c.toLowerCase()===inp.value.toLowerCase());});
+    }
+    c.dataset.presets.split(',').forEach(function(h){
+      var b=document.createElement('button');b.type='button';b.dataset.c=h;b.style.background=h;
+      b.setAttribute('aria-label','Usar a cor '+h);
+      b.addEventListener('click',function(){inp.value=h;sync();});
+      box.appendChild(b);
+    });
+    inp.addEventListener('input',sync);sync();
+  });
+})();
+</script>
+<script>
+(function(){
+  function hsv2hex(h,s,v){var f=function(n){var k=(n+h/60)%6,x=v-v*s*Math.max(0,Math.min(k,4-k,1));return Math.round(x*255).toString(16).padStart(2,'0');};return '#'+f(5)+f(3)+f(1);}
+  function hex2hsv(x){var r=parseInt(x.substr(1,2),16)/255,g=parseInt(x.substr(3,2),16)/255,b=parseInt(x.substr(5,2),16)/255,mx=Math.max(r,g,b),mn=Math.min(r,g,b),d=mx-mn,h=0;if(d){if(mx===r)h=((g-b)/d)%6;else if(mx===g)h=(b-r)/d+2;else h=(r-g)/d+4;h*=60;if(h<0)h+=360;}return {h:h,s:mx?d/mx:0,v:mx};}
+  var open=null;
+  function close(){if(open){open.pop.hidden=true;open.sw.setAttribute('aria-expanded','false');open=null;}}
+  document.querySelectorAll('.color').forEach(function(c){
+    var inp=c.querySelector('input[type=hidden]'),sw=c.querySelector('.sw'),st=hex2hsv(inp.value);
+    var pop=document.createElement('div');pop.className='pop';pop.hidden=true;
+    pop.innerHTML='<div class="sv"><i class="knob"></i></div><input class="hue" type="range" min="0" max="360" aria-label="Tom da cor"><div class="prow"><input class="hexin" maxlength="7" spellcheck="false" autocapitalize="off" aria-label="Código da cor"><button type="button" class="done">Pronto</button></div>';
+    c.appendChild(pop);
+    var sv=pop.querySelector('.sv'),knob=pop.querySelector('.knob'),hue=pop.querySelector('.hue'),hx=pop.querySelector('.hexin');
+    function paint(){sv.style.backgroundColor='hsl('+st.h+',100%,50%)';knob.style.left=(st.s*100)+'%';knob.style.top=((1-st.v)*100)+'%';hue.value=st.h;}
+    function push(hex){inp.value=hex;hx.value=hex.toUpperCase();inp.dispatchEvent(new Event('input',{bubbles:true}));}
+    function commit(){push(hsv2hex(st.h,st.s,st.v));paint();}
+    function pick(e){var r=sv.getBoundingClientRect();st.s=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width));st.v=1-Math.min(1,Math.max(0,(e.clientY-r.top)/r.height));commit();}
+    sv.addEventListener('pointerdown',function(e){sv.setPointerCapture(e.pointerId);pick(e);sv.onpointermove=pick;});
+    sv.addEventListener('pointerup',function(){sv.onpointermove=null;});
+    hue.addEventListener('input',function(){st.h=+hue.value;commit();});
+    hx.addEventListener('input',function(){var v=hx.value.trim().toLowerCase();if(v[0]!=='#')v='#'+v;if(/^#[0-9a-f]{6}$/.test(v)){st=hex2hsv(v);push(v);paint();}});
+    sw.addEventListener('click',function(e){
+      e.stopPropagation();var was=open&&open.pop===pop;close();
+      if(!was){st=hex2hsv(inp.value);hx.value=inp.value.toUpperCase();paint();pop.hidden=false;sw.setAttribute('aria-expanded','true');open={pop:pop,sw:sw};}
+    });
+    pop.querySelector('.done').addEventListener('click',close);
+    pop.addEventListener('click',function(e){e.stopPropagation();});
+    c.querySelector('.presets').addEventListener('click',function(){st=hex2hsv(inp.value);hx.value=inp.value.toUpperCase();paint();});
+  });
+  document.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 })();
 </script>
 </body>
